@@ -1,2 +1,101 @@
-# 2025-STTSS-Tutorial-Coding-Practice-1
-Template for 2025 STTSS tutorial coding practice 1
+# 2025 STTSS Tutorial Coding Practice-1
+
+## Scenario
+
+There is no scenario, just some warmup exercises.
+
+## Tasks
+
+### Task 1: Flatten a nested list
+
+Given a nested list with arbitrary layers, create a flattened list with all its elements, preserving the element's order in the original nested list.
+
+Flattening a list means making a n-D list into 1-D. A very simple example is:
+
+`[[1,2], [3,4], [5,6,7]]` $\rightarrow$ `[1,2,3,4,5,6,7]`
+
+Input parameter:
+- `input_list`: A `list` object with arbitrary number of layers
+
+Output type: `list`
+
+> Hints:
+> - Using simple for-loops should at least guarantee you some scores, but probably not all.
+> - The most intuitive way to solve this is to use recursion, if you have not realized already.
+> - A more advanced way is to use a queue to store unflattened lists, but this is out of scope as the algorithm is **ever so slightly** advanced.
+
+### Task 2: Convert hex string to decimal number
+
+Given a hex string, convert it to a decimal number.
+
+Hex string is a string consisting of only hex characters: `0123456789abcdef`. To make this task slightly more challenging, the alphabets can be in random capitalization and the `int()` function is banned. The hex string may also contain random characters that are NOT in the hex characters list, which you should filter away.
+
+Examples:
+- "dEADbEef" $\rightarrow$ 3735928559
+- "iloveict" $\rightarrow$ 236
+    - Explanation: removing non-hex characters, the string should now only include "ec". Converting the string into integer then gives 236.
+
+Input parameter:
+- `s`: A `str` containing the set of printable ASCII characters
+
+Output type: `int`
+
+> Hints:
+> - Filtering characters is easy — just ignore them!
+> - The way you normally do this task by hand is what you should implement.
+
+### Task 3: Dealing with fractions
+
+Python does not have a fraction type, so why not make one ourselves? Implement mathematical operators in the `Fraction` class provided.
+
+Note that all fractions should always be in their **simplest form**.
+
+#### Task 3.1: `__add__`
+
+Implement fraction addition. The function should return a new fraction object.
+
+Input parameter:
+- `other`: a fraction
+
+Output type: `Fraction`
+
+#### Task 3.2: `__sub__`
+
+Implement fraction subtraction. The function should return a new fraction object.
+
+Input parameter:
+- `other`: a fraction
+
+Output type: `Fraction`
+
+#### Task 3.3: `__mul__`
+
+Implement fraction multiplication. The function should return a new fraction object.
+
+Input parameter:
+- `other`: a fraction
+
+Output type: `Fraction`
+
+#### Task 3.4: `__truediv__`
+
+Implement fraction division. The function should return a new fraction object.
+
+Input parameter:
+- `other`: a fraction
+
+Output type: `Fraction`
+
+To create a new fraction object, call `Fraction(a, b)` with `a` and `b` as integers. To test these functions, you can simply use `+` `-` `*` `/` similar to how you use them with normal types. You can also print fractions directly inside `print()` functions.
+
+> Hints:
+> - Find a use of the `gcd` and `lcm` functions.
+> - Notice that `-` and `/` are just `+` and `*` but inverted in some way, so you only need to implement the algorithms of `+` and `*`, then call them in `-` and `/` respectively.
+
+## Grading Scheme
+
+No generative AI is allowed! I will check for traces of AI manually.
+
+You should also NOT import any extra libraries or modify any existing codes already in the skeleton code file, but feel free to add any helper functions anywhere in the code.
+
+Your score depends on the percentage of test cases you pass, including both given and **hidden** ones.
