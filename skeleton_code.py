@@ -53,19 +53,20 @@ class Fraction:
 # Separation Line #
 ###################
 
-# Task 1 test cases
-assert task1([[1,2], [3,4], [5,6,7]]) == [1,2,3,4,5,6,7], "Your task 1 implementation is wrong!"
-
-# Task 2 test cases
-assert task2("dEADbEef") == 3735928559, "Your task 2 implementation is wrong!"
-assert task2("iloveict") == 236, "Your task 2 implementation is wrong!"
-
-# Task 3 test cases
-a = Fraction(1, 2)
-b = Fraction(2, 3)
-assert a + b == Fraction(7, 6), "Your task 3.1 implementation is wrong!"
-assert b - a == Fraction(1, 6), "Your task 3.2 implementation is wrong!"
-assert a * b == Fraction(1, 3), "Your task 3.3 implementation is wrong!"
-assert a / b == Fraction(3, 4), "Your task 3.4 implementation is wrong!"
-
-print("Epic, you passed all given testcases!")
+if __name__ == "__main__":
+    # Task 1 test cases
+    assert task1([[1,2], [3,4], [5,6,7]]) == [1,2,3,4,5,6,7], "Your task 1 implementation is wrong!"
+    
+    # Task 2 test cases
+    assert task2("dEADbEef") == 3735928559, "Your task 2 implementation is wrong!"
+    assert task2("iloveict") == 236, "Your task 2 implementation is wrong!"
+    
+    # Task 3 test cases
+    a = Fraction(1, 2)
+    b = Fraction(2, 3)
+    assert a + b == Fraction(7, 6), "Your task 3.1 implementation is wrong!"
+    assert b - a == Fraction(1, 6), "Your task 3.2 implementation is wrong!"
+    assert a * b == Fraction(1, 3), "Your task 3.3 implementation is wrong!"
+    assert a / b == Fraction(3, 4), "Your task 3.4 implementation is wrong!"
+    
+    print("Epic, you passed all given testcases!")
