@@ -208,4 +208,8 @@ __marimo__/
 
 # Solution
 solve.py
-testcases.py
+testcases.*
+.vagrant/
+Vagrantfile
+test.py
+testcases-1

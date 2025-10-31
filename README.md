@@ -48,7 +48,7 @@ Output type: `int`
 
 Python does not have a fraction type, so why not make one ourselves? Implement mathematical operators in the `Fraction` class provided.
 
-Note that all fractions should always be in their **simplest form**.
+Note that all fractions should always be in their **simplest form**. If the fraction is negative, put the negative sign in the **numerator**.
 
 #### Task 3.1: `__add__`
 
@@ -87,6 +87,8 @@ Input parameter:
 Output type: `Fraction`
 
 To create a new fraction object, call `Fraction(a, b)` with `a` and `b` as integers. To test these functions, you can simply use `+` `-` `*` `/` similar to how you use them with normal types. You can also print fractions directly inside `print()` functions.
+
+You do not have to handle divide-by-0 cases. With a good implementation, the multiply-by-0 cases should be automatically handled as `0/1`.
 
 > Hints:
 > - Find a use of the `gcd` and `lcm` functions.
